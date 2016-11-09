@@ -4,7 +4,15 @@ app.controller('MainCtrl',
 	['$scope',
 		function($scope){
 			$scope.welcomeMsg = "Way to Angular!!";
-			$scope.posts = ['post1', 'post2', 'post3', 'post4'];
+			$scope.posts = [
+				{title: 'Presidential Election', upvote: 10},
+				{title: 'Stock Market', upvote: 8},
+				{title: 'Venus And Earth', upvote: 15},
+				{title: 'FIFA', upvote: 12},
+				{title: 'India', upvote: 22}
+			];
+
+
 		}
 	]
 );

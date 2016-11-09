@@ -1,0 +1,8 @@
+.simpleTable{
+	border: 1px solid black;
+}
+
+.simpleTable td{
+	padding-left: 10px;
+	padding-right: 10px;
+}
