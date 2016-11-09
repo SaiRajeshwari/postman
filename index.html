@@ -20,7 +20,7 @@
 	</div>
 	<div>
 		<table class="simpleTable">
-			<tr ng-repeat="post in posts">
+			<tr ng-repeat="post in posts | orderBy: 'upvote' ">
 				<td>{{post.title}}</td>
 				<td>{{post.upvote}}</td>
 			</tr>
