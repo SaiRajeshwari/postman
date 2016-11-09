@@ -7,5 +7,12 @@
 
 <body ng-app="postman" ng-controller="MainCtrl">
 	<div>{{welcomeMsg}}</div>
+	<div ng-init="qty=10; cost=2">
+		Quantity: <input type="number" ng-model="qty">
+		Cost:     <input type="number" ng-model="cost">
+		<b> 
+		TOTAL: {{qty*cost | currency}}
+		</b>
+	</div>
 </body>
 </html>
