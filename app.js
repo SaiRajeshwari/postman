@@ -18,7 +18,9 @@ app.controller('MainCtrl',
 				$scope.newPostUpvote = '';
 			}
 
-
+			$scope.incrementUpvote = function(post){
+				post.upvote += 1;
+			}
 		}
 	]
 );
