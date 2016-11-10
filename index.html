@@ -1,9 +1,13 @@
 <html>
 <head>
 	<title>My Angular App</title>
+
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	<script src="app.js"></script>
-	<link rel="stylesheet" type="text/css" href="base.css">
+
 </head>
 
 <body ng-app="postman" ng-controller="MainCtrl">
@@ -26,7 +30,7 @@
 					<span ng-hide="post.link">{{post.title}}</span>
 				</td>
 				<td>{{post.upvote}}</td>
-				<td><span id="incrementVote" ng-click="incrementUpvote(post)">^</span></td>
+				<td><span class="glyphicon glyphicon-thumbs-up" id="incrementVote" ng-click="incrementUpvote(post)"></span></td>
 			</tr>
 		</table>
 		<br/>
