@@ -1,8 +1,8 @@
 
 var app = angular.module('postman', []);
 app.controller('MainCtrl', 
-	['$scope',
-		function($scope){
+	['$scope', function($scope){
+
 			$scope.welcomeMsg = "Way to Angular!!";
 			$scope.posts = [
 				{title: 'Presidential Election', upvote: 10},
@@ -11,6 +11,12 @@ app.controller('MainCtrl',
 				{title: 'FIFA', upvote: 12},
 				{title: 'India', upvote: 22}
 			];
+			$scope.addPost = function(){
+				if(!$scope.newPostTitle || !$scope.newPostUpvote){return;}
+				$scope.posts.push({title: $scope.newPostTitle, upvote: $scope.newPostUpvote});
+				$scope.newPostTitle = '';
+				$scope.newPostUpvote = '';
+			}
 
 
 		}
