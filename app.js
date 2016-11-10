@@ -12,10 +12,13 @@ app.controller('MainCtrl',
 				{title: 'India', upvote: 22}
 			];
 			$scope.addPost = function(){
-				if(!$scope.newPostTitle || !$scope.newPostUpvote){return;}
-				$scope.posts.push({title: $scope.newPostTitle, upvote: $scope.newPostUpvote});
+				if(!$scope.newPostTitle){
+					$scope.newPostLink = '';
+					return;
+				}
+				$scope.posts.push({title: $scope.newPostTitle, upvote: 7, link:$scope.newPostLink});
 				$scope.newPostTitle = '';
-				$scope.newPostUpvote = '';
+				$scope.newPostLink = '';
 			}
 
 			$scope.incrementUpvote = function(post){
