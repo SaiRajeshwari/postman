@@ -1,16 +1,25 @@
 
 var app = angular.module('postman', []);
+
+app.factory('posts',
+	[function(){
+		var o = {
+			posts: [{title:'hello', link:'', upvote:0},
+					{title:'sai', link:'www.sai.org', upvote:10},
+					{title:'rajee', link:'www.google.com', upvote:5},
+					{title:'esp', link:'', upvote:2}]
+		};
+		return o;
+
+	}]
+);
+
+
 app.controller('MainCtrl', 
-	['$scope', function($scope){
+	['$scope', 'posts', function($scope, posts){
 
 			$scope.welcomeMsg = "Way to Angular!!";
-			$scope.posts = [
-				{title: 'Presidential Election', upvote: 10},
-				{title: 'Stock Market', upvote: 8},
-				{title: 'Venus And Earth', upvote: 15},
-				{title: 'FIFA', upvote: 12},
-				{title: 'India', upvote: 22}
-			];
+			$scope.posts = posts.posts;
 			$scope.addPost = function(){
 				if(!$scope.newPostTitle){
 					$scope.newPostLink = '';
@@ -27,5 +36,7 @@ app.controller('MainCtrl',
 		}
 	]
 );
+	
+
 
 
